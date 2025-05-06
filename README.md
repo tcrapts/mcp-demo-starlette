@@ -2,8 +2,10 @@
 This project demonstrates how to add real-time weather information to Large Language Models using a [Model Context Protocol Server (MCP)](https://modelcontextprotocol.io/introduction).
 
 ## Usage
-1. Start the MCP server: `uv run uvicorn src.server:app --reload --port 8000`
-2. Run the client: `uv run python -m src.client "What is the current weather in Barcelona?"`
+1. Create a `.env` file with your OpenAI API key: `echo "OPENAI_API_KEY=<YOUR_KEY>" > .env`
+2. Install dependencies: `uv sync`
+2. Start the MCP server: `uv run uvicorn src.server:app --reload --port 8000`
+3. Run the client: `uv run python -m src.client "What is the current weather in Barcelona?"`
 
 Optional: you can inspect the MCP server using the [Inspector](https://github.com/modelcontextprotocol/inspector). This requires `npx` to be installed.
 
